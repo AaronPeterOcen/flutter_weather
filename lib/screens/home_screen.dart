@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(3, -0.3),
+                alignment: const AlignmentDirectional(3, -0.3),
                 child: Container(
                   height: 300,
                   width: 300,
@@ -36,24 +36,24 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-3, -0.3),
+                alignment: const AlignmentDirectional(-3, -0.3),
                 child: Container(
                   height: 300,
                   width: 300,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: const Color.fromARGB(255, 52, 131, 249),
+                    color: Color.fromARGB(255, 52, 131, 249),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0, -1.2),
+                alignment: const AlignmentDirectional(0, -1.2),
                 child: Container(
                   height: 300,
                   width: 600,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     // shape: BoxShape.circle,
-                    color: const Color.fromARGB(255, 255, 254, 254),
+                    color: Color.fromARGB(255, 255, 254, 254),
                   ),
                 ),
               ),
@@ -64,6 +64,33 @@ class HomeScreen extends StatelessWidget {
                 ),
                 child: Container(
                   decoration: const BoxDecoration(color: Colors.transparent),
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "📍 Kampala, Uganda",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      "Good morning",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
                 ),
               )
             ],

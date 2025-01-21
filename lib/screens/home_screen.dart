@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,20 +70,20 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                child: const Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "📍 Kampala, Uganda",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
-                    Text(
+                    const Text(
                       "Good morning",
                       style: TextStyle(
                         color: Colors.white,
@@ -90,6 +91,14 @@ class HomeScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    SvgPicture.asset(
+                      'assets/images/cloudy.svg',
+                      width: 300, // Set the desired width
+                      height: 300, // Set the desired height
+                    )
                   ],
                 ),
               )

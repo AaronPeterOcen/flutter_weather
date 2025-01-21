@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   width: 300,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 52, 131, 249),
+                    color: Color.fromARGB(255, 11, 148, 178),
                   ),
                 ),
               ),
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                   width: 600,
                   decoration: const BoxDecoration(
                     // shape: BoxShape.circle,
-                    color: Color.fromARGB(255, 255, 254, 254),
+                    color: Color.fromARGB(255, 206, 191, 191),
                   ),
                 ),
               ),
@@ -94,11 +94,12 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 5,
                     ),
-                    SvgPicture.asset(
-                      'assets/images/cloudy.svg',
-                      width: 300, // Set the desired width
-                      height: 300, // Set the desired height
-                    )
+                    // SvgPicture.asset(
+                    //   'assets/images/cloudy.svg',
+                    //   width: 300, // Set the desired width
+                    //   height: 300, // Set the desired height
+                    // )
+                    Image.asset('assets/images/cloudy.png')
                   ],
                 ),
               )

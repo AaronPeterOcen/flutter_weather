@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,7 +22,52 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(40, 1.2 * kToolbarHeight, 40, 20),
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
-          child: ,
+          child: Stack(
+            children: [
+              Align(
+                alignment: AlignmentDirectional(3, -0.3),
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue[900],
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(-3, -0.3),
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: const Color.fromARGB(255, 52, 131, 249),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, -1.2),
+                child: Container(
+                  height: 300,
+                  width: 600,
+                  decoration: BoxDecoration(
+                    // shape: BoxShape.circle,
+                    color: const Color.fromARGB(255, 255, 254, 254),
+                  ),
+                ),
+              ),
+              BackdropFilter(
+                filter: ImageFilter.blur(
+                  sigmaX: 100.0,
+                  sigmaY: 100.0,
+                ),
+                child: Container(
+                  decoration: const BoxDecoration(color: Colors.transparent),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

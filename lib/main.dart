@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Apply Google Font to the overall app theme
-        textTheme: GoogleFonts.ubuntuTextTheme(
+        textTheme: GoogleFonts.karlaTextTheme(
           Theme.of(context).textTheme, // Merges with the default TextTheme
         ),
       ),

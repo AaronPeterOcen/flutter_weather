@@ -99,7 +99,208 @@ class HomeScreen extends StatelessWidget {
                     //   width: 300, // Set the desired width
                     //   height: 300, // Set the desired height
                     // )
-                    Image.asset('assets/images/cloudy.png')
+                    Center(child: Image.asset('assets/images/cloudy.png')),
+
+                    const Center(
+                      child: Text(
+                        '10°C ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 45,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Center(
+                      child: Text(
+                        'Cloudy day ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const Center(
+                      child: Text(
+                        'Tuesday 21 - 12:37  ',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/sun.png',
+                              scale: 6,
+                            ),
+                            // SvgPicture.asset(
+                            //   'assets/images/clear-day.svg',
+                            //   width: 60, // Set the desired width
+                            //   height: 60, // Set the desired height
+                            // ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Sunrise',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w100),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  '6:23',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/night.png',
+                              scale: 6,
+                            ),
+                            // SvgPicture.asset(
+                            //   'assets/images/clear-day.svg',
+                            //   width: 60, // Set the desired width
+                            //   height: 60, // Set the desired height
+                            // ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Sunset',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w100),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  '19:23',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 5.0),
+                      child: Divider(
+                        color: Colors.white24,
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/heat.png',
+                              scale: 6,
+                            ),
+                            // SvgPicture.asset(
+                            //   'assets/images/clear-day.svg',
+                            //   width: 60, // Set the desired width
+                            //   height: 60, // Set the desired height
+                            // ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Max Temp',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w100),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  '6:23',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/cold.png',
+                              scale: 6,
+                            ),
+                            // SvgPicture.asset(
+                            //   'assets/images/clear-day.svg',
+                            //   width: 60, // Set the desired width
+                            //   height: 60, // Set the desired height
+                            // ),
+                            const SizedBox(
+                              width: 6,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Min temp',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w100),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  '19:23',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ],
                 ),
               )

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_weather/screens/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
+  await dotenv.load(fileName: ".env");
 }
 
 class MyApp extends StatelessWidget {

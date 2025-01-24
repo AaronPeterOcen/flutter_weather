@@ -7,8 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load(fileName: ".env");
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,22 +26,23 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: FutureBuilder(
-          future: _determinePosition(),
-          builder: (context, snap) {
-            if (snap.hasData) {
-              return BlocProvider<WeatherBlocBloc>(
-                create: (context) =>
-                    WeatherBlocBloc()..add(FetchWeather(snap.data as Position)),
-                child: const HomeScreen(),
-              );
-            } else {
-              return const Scaffold(
-                body: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              );
-            }
-          }),
+        future: _determinePosition(),
+        builder: (context, snap) {
+          if (snap.hasData) {
+            return BlocProvider<WeatherBlocBloc>(
+              create: (context) =>
+                  WeatherBlocBloc()..add(FetchWeather(snap.data as Position)),
+              child: const HomeScreen(),
+            );
+          } else {
+            return const Scaffold(
+              body: Center(
+                child: CircularProgressIndicator(),
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }
